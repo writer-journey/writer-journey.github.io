@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود به حساب | وب‌سایت نویسندگی من</title>
+
+  <link rel="stylesheet" href="auth.css">
+
+  <!-- Firebase config -->
+  <script defer src="firebaseConfig.js"></script>
+  <!-- Authentication logic -->
+  <script defer src="auth.js"></script>
+</head>
+<body>
+
+  <div class="auth-container">
+
+    <h2 class="auth-title">ورود به حساب</h2>
+
+    <form id="login-form" class="auth-form">
+
+      <input type="email" id="login-email" placeholder="ایمیل" required>
+
+      <input type="password" id="login-password" placeholder="رمز عبور" required>
+
+      <button type="submit" class="auth-btn">ورود</button>
+
+    </form>
+
+    <p class="auth-link">
+      هنوز ثبت‌نام نکرده‌اید؟
+      <a href="register.html">ساخت حساب جدید</a>
+    </p>
+
+  </div>
+
+</body>
+</html>
 
