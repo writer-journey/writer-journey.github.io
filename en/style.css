@@ -1,1 +1,146 @@
+/* ------------------------ */
+/* Global Styles */
+/* ------------------------ */
+body {
+  font-family: "Vazir", sans-serif;
+  background: #0d0d0d;
+  color: #eee;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ------------------------ */
+/* Header */
+/* ------------------------ */
+.header, .header-content {
+  width: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.nav a, .nav-link {
+  color: #eee;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover, .nav-link:hover {
+  color: #78a6ff;
+}
+
+#lang-switch {
+  background: #444;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#lang-switch:hover {
+  background: #666;
+}
+
+/* ------------------------ */
+/* Hero Section */
+/* ------------------------ */
+.hero {
+  text-align: center;
+  padding: 120px 20px 40px 20px;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* ------------------------ */
+/* Cards Section */
+/* ------------------------ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card-link {
+  color: #78a6ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card-link:hover {
+  color: #fff;
+}
+
+/* ------------------------ */
+/* Footer */
+/* ------------------------ */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  margin-top: 50px;
+}
+
+/* ------------------------ */
+/* Responsive */
+/* ------------------------ */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
 
