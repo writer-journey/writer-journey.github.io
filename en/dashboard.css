@@ -1,1 +1,188 @@
+/* ------------------------ */
+/* فونت و بدنه */
+/* ------------------------ */
+body {
+  font-family: "Vazir", sans-serif;
+  background: #0d0d0d;
+  color: #eee;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ------------------------ */
+/* هدر */
+/* ------------------------ */
+.header {
+  width: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+}
+
+.header-inner {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+#logout-btn {
+  padding: 6px 14px;
+  background: #444;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#logout-btn:hover {
+  background: #666;
+}
+
+/* ------------------------ */
+/* محتوای اصلی */
+/* ------------------------ */
+.container {
+  width: 92%;
+  margin: 120px auto 50px auto;
+}
+
+/* Welcome Section */
+#welcome h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+#welcome p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* ------------------------ */
+/* VIP Cards */
+/* ------------------------ */
+#vip-stories {
+  margin-top: 40px;
+}
+
+#vip-stories h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ------------------------ */
+/* Messages Section */
+/* ------------------------ */
+#messages {
+  margin-top: 50px;
+}
+
+#messages h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+#message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#message-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #eee;
+  resize: none;
+}
+
+#message-form button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background: #444;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#message-form button:hover {
+  background: #666;
+}
+
+#messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message-item {
+  background: #222;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+/* ------------------------ */
+/* Responsive */
+/* ------------------------ */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  #welcome h2 {
+    font-size: 22px;
+  }
+
+  #vip-stories h3,
+  #messages h3 {
+    font-size: 18px;
+  }
+}
 
