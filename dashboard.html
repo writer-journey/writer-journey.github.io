@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>داشبورد | وب‌سایت نویسندگی من</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <script defer src="firebaseConfig.js"></script>
+  <script defer src="dashboard.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <h1>داشبورد</h1>
+      <button id="logout-btn">خروج</button>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 100px;">
+
+    <!-- خوش آمدگویی -->
+    <section id="welcome">
+      <h2>خوش آمدید، <span id="user-name">کاربر</span></h2>
+      <p>ایمیل شما: <span id="user-email"></span></p>
+    </section>
+
+    <!-- کارت‌های VIP -->
+    <section id="vip-stories">
+      <h3>داستان‌های ویژه</h3>
+      <div class="cards" id="vip-cards">
+        <!-- کارت‌ها با JS از Firestore بارگذاری می‌شوند -->
+      </div>
+    </section>
+
+    <!-- پیام‌ها -->
+    <section id="messages">
+      <h3>پیام‌ها</h3>
+      <form id="message-form">
+        <textarea id="message-input" placeholder="پیام جدید..." rows="3" required></textarea>
+        <button type="submit">ارسال</button>
+      </form>
+
+      <div id="messages-list">
+        <!-- پیام‌ها با JS از Firestore بارگذاری می‌شوند -->
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
 
