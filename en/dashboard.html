@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | My Writing Website</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+  <script defer src="dashboard.js"></script>
+  <script defer src="firebaseConfig.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <h1>Dashboard</h1>
+      <button id="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+      <h2>Welcome, <span id="user-name"></span>!</h2>
+      <p>Here you can see your latest VIP stories and messages.</p>
+    </section>
+
+    <!-- VIP Stories -->
+    <section id="vip-stories">
+      <h3>VIP Stories</h3>
+      <div class="cards">
+        <div class="card">
+          <h3>VIP Story 1</h3>
+          <p>A short description of VIP Story 1...</p>
+        </div>
+        <div class="card">
+          <h3>VIP Story 2</h3>
+          <p>A short description of VIP Story 2...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="messages">
+      <h3>Messages</h3>
+
+      <!-- Send Message -->
+      <form id="message-form">
+        <textarea id="message-input" placeholder="Write your message here..." required></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <!-- List of messages -->
+      <div id="messages-list">
+        <!-- Messages will appear here dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
 
