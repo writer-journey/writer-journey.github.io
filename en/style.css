@@ -8,6 +8,7 @@ body {
   margin: 0;
   line-height: 1.6;
   direction: ltr;
+  overflow-x: hidden;
 }
 
 /* ------------------------ */
@@ -17,7 +18,7 @@ body {
   width: 100%;
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(8px);
-  padding: 12px 0;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +26,7 @@ body {
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #222;
+  box-sizing: border-box;
 }
 
 .header-content h1 {
@@ -34,13 +36,28 @@ body {
 
 .nav-link {
   color: #eee;
-  margin-right: 15px;   /* ← نسخه فارسی margin-left بود */
+  margin-right: 15px;
   text-decoration: none;
   transition: 0.3s;
+  font-size: 15px;
 }
 
 .nav-link:hover {
   color: #78a6ff;
+}
+
+/* Login/Register Option C */
+nav .nav-link span {
+  margin-left: 15px;
+  font-weight: 400;
+}
+
+nav .nav-link span strong {
+  color: #78a6ff;
+}
+
+nav .nav-link span:hover strong {
+  color: #fff;
 }
 
 #lang-switch {
@@ -62,7 +79,7 @@ body {
 /* ------------------------ */
 .hero {
   text-align: center;
-  padding: 120px 20px 40px 20px;
+  padding: 140px 20px 40px 20px; /* بالا برای هدر ثابت */
 }
 
 .hero-title {
@@ -93,7 +110,7 @@ body {
   border-radius: 12px;
   border: 1px solid #222;
   transition: 0.3s;
-  text-align: left;     /* ← نسخه فارسی right بود */
+  text-align: left;
 }
 
 .card:hover {
@@ -129,4 +146,30 @@ footer {
   padding: 20px;
   border-top: 1px solid #222;
   margin-top: 50px;
+}
+
+/* ------------------------ */
+/* Responsive */
+/* ------------------------ */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  nav .nav-link span {
+    margin-left: 10px;
+  }
 }
