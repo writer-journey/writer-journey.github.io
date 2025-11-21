@@ -173,3 +173,25 @@ footer {
     margin-left: 10px;
   }
 }
+/* اصلاح موقعیت عنوان هدر در نسخه انگلیسی */
+.header-content {
+  display: flex;
+  justify-content: center; /* وسط چین کردن محتوا */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+/* برای اینکه ناوبار هم سمت راست بماند */
+.header-content nav {
+  position: absolute;
+  right: 20px; /* فاصله از سمت راست */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
